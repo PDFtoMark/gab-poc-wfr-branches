@@ -16,5 +16,8 @@ jobs:
           echo "head_repo=${{ github.event.workflow_run.head_repository.full_name }}"
           echo "event=${{ github.event.workflow_run.event }}"
           echo "github_ref=${{ github.ref }}"
+          echo "github_sha=${{ github.sha }}"
+          echo "run_head_sha=${{ github.event.workflow_run.head_sha }}"
+          echo "default_branch=${{ github.event.repository.default_branch }}"
           echo "github_event_name=${{ github.event_name }}"
           echo "labels=${{ github.event.workflow_run.head_branch }}" >> $GITHUB_OUTPUT
